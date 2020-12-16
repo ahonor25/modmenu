@@ -28,8 +28,7 @@ addresses = [
     ("input", "Username", 0x05A502F8, (read_username, write_username)),
 ]
 
-pm = pymem.Pymem("Geometry Dash.exe")
-client = pymem.process.module_from_name(pm.process_handle, "GameAssembly.dll").lpBaseOfDll
+pm = pymem.Pymem(process_name)
 
 # TODO: less cpu usage like wtf
 
